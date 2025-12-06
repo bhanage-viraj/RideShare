@@ -16,14 +16,16 @@ public class Ride {
     @Id
     private String id;
 
-    private String driverId;
-    private String source;
-    private String destination;
+    private String userId; // Passenger who requested the ride
+    private String driverId; // Driver who accepts the ride (nullable initially)
+    
+    private String pickupLocation;
+    private String dropLocation;
 
-    private LocalDateTime departureTime;
-    private int availableSeats;
-    private double pricePerSeat;
+    private LocalDateTime createdAt;
+    private LocalDateTime acceptedAt;
+    private LocalDateTime completedAt;
 
-    private String status; // "OPEN", "FULL", "CANCELLED", "COMPLETED"
+    private String status; // "REQUESTED", "ACCEPTED", "COMPLETED", "CANCELLED"
 }
 

@@ -9,6 +9,9 @@ import lombok.Data;
 public class RegisterRequest {
 
     @NotBlank
+    private String username;
+
+    @NotBlank
     private String name;
 
     @Email
@@ -22,6 +25,6 @@ public class RegisterRequest {
     private String phone;
 
     @NotBlank
-    private String role; // "USER" or "DRIVER"
+    private String role; // "PASSENGER" or "DRIVER"
 }
 

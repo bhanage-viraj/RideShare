@@ -16,12 +16,13 @@ public class User {
     @Id
     private String id;
 
+    private String username;
     private String name;
     private String email;
     private String password;
 
     private String phone;
-    private String role; 
+    private String role; // "PASSENGER" or "DRIVER"
     private Set<String> roles;
 }
 

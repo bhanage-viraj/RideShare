@@ -30,6 +30,7 @@ public class AuthServiceImpl implements AuthService {
         }
 
         User user = User.builder()
+                .username(request.getUsername())
                 .name(request.getName())
                 .email(request.getEmail())
                 .password(passwordEncoder.encode(request.getPassword()))
@@ -42,6 +43,7 @@ public class AuthServiceImpl implements AuthService {
 
         return UserResponse.builder()
                 .id(user.getId())
+                .username(user.getUsername())
                 .name(user.getName())
                 .email(user.getEmail())
                 .phone(user.getPhone())
